@@ -300,6 +300,24 @@ html:not(.dark) .card-hover:hover {
   color: var(--text-secondary);
 }
 
+.footer-bg {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.footer-link {
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--text-accent);
+}
+
 /* Minimal Scroll Animations */
 .fade-in {
   opacity: 0;
