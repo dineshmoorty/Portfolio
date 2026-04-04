@@ -11,6 +11,12 @@ I started my career in technical field roles, which helped me develop strong pro
 
 ---
 
+## Screenshots
+
+![hero_section](image.png)
+![project_section](image-1.png)
+![skill_section](image-2.png)
+
 ## 🛠️ Tech Stack
 
 - PHP
@@ -47,16 +53,16 @@ I started my career in technical field roles, which helped me develop strong pro
 
 ## 🌐 Live Demo
 
-👉 [View Portfolio](https://yourusername.github.io/dinesh-portfolio/)
+👉 [View Portfolio] https://dineshmoorty.github.io/Portfolio/
 
 
 ---
 
 ## 📫 Contact
 
-- 📧 Email: yourmail@gmail.com
-- 💼 LinkedIn: https://linkedin.com/in/yourprofile
-- 💻 GitHub: https://github.com/yourusername
+- 📧 Email: dineshmoorthias@gmail.com
+- 💼 LinkedIn: www.linkedin.com/in/dineshmoorthi-as
+- 💻 GitHub: https://github.com/dineshmoorty/
 
 ---
 
