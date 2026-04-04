@@ -1,0 +1,377 @@
+/* Light theme styles */
+html:not(.dark) {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f4f6;
+  --bg-tertiary: #e5e7eb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --text-accent: #3b82f6;
+}
+
+/* Dark theme styles (default) */
+html.dark {
+  --bg-primary: #000000;
+  --bg-secondary: #111827;
+  --bg-tertiary: #1f2937;
+  --text-primary: #ffffff;
+  --text-secondary: #d1d5db;
+  --text-accent: #60a5fa;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.section-bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.section-bg-tertiary {
+  background-color: var(--bg-tertiary);
+}
+
+.navbar-bg {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+html:not(.dark) .navbar-bg {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-bg.scrolled {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.nav-item {
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.nav-item:hover {
+  transform: translateY(-2px);
+}
+
+.mobile-menu-transition {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-12px);
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.mobile-menu-transition.open {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+html:not(.dark) .hero-overlay {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.hero-text {
+  color: var(--text-primary);
+}
+
+html:not(.dark) .hero-text-secondary {
+  color: #374151;
+}
+
+.card-bg {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--bg-secondary);
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  background-color: var(--bg-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+html:not(.dark) .card-hover:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.form-input {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.form-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.form-input:focus {
+  border-color: var(--text-accent);
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.15);
+  outline: none;
+}
+
+.form-button {
+  background-color: var(--text-accent);
+  color: #ffffff;
+}
+
+.form-button:hover {
+  background-color: rgba(59, 130, 246, 0.9);
+}
+
+.project-image {
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-image:hover {
+    transform: scale(1.08);
+    filter: saturate(1.1);
+  }
+}
+
+.project-image:focus-visible {
+  transform: scale(1.04);
+  outline: 2px solid var(--text-accent);
+}
+
+.project-image {
+  cursor: zoom-in;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skill-card {
+  animation: slideInUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.skill-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.skill-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.skill-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.skill-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.skill-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.skill-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.85);
+  padding: 1.5rem;
+  z-index: 70;
+}
+
+.image-modal.open {
+  display: flex;
+}
+
+.image-modal-content {
+  position: relative;
+  max-width: 95vw;
+  max-height: 95vh;
+  width: 100%;
+}
+
+.image-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.75);
+}
+
+.image-modal-img {
+  position: relative;
+  width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.image-modal.open .image-modal-img {
+  transform: scale(1.01);
+}
+
+.image-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  color: #ffffff;
+  padding: 0.65rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.image-modal-close:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-accent {
+  color: var(--text-accent);
+}
+
+.bg-accent {
+  background-color: var(--text-accent);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.bg-tertiary {
+  background-color: var(--bg-tertiary);
+}
+
+.border-secondary {
+  border-color: var(--bg-secondary);
+}
+
+.border-accent {
+  border-color: var(--text-accent);
+}
+
+.placeholder-secondary::placeholder {
+  color: var(--text-secondary);
+}
+
+/* Scroll Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-left.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-right.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scale-in.animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Staggered animations */
+.stagger-1 {
+  transition-delay: 0.1s;
+}
+.stagger-2 {
+  transition-delay: 0.2s;
+}
+.stagger-3 {
+  transition-delay: 0.3s;
+}
+.stagger-4 {
+  transition-delay: 0.4s;
+}
+.stagger-5 {
+  transition-delay: 0.5s;
+}
+.stagger-6 {
+  transition-delay: 0.6s;
+}

@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Dinesh Moorthi - Laravel Developer Portfolio. Experienced in building web applications, admin panels, and APIs using Laravel, MySQL, and AWS."
+    />
+    <meta
+      name="keywords"
+      content="Dinesh Moorthi, Laravel Developer, PHP Developer, Web Developer, MySQL, AWS, Portfolio"
+    />
+    <meta name="author" content="Dinesh Moorthi" />
+
+    <!-- Open Graph (for WhatsApp / LinkedIn preview) -->
+    <meta property="og:title" content="Dinesh Moorthi - Laravel Developer" />
+    <meta
+      property="og:description"
+      content="Portfolio showcasing Laravel projects, admin panels, and real-world applications."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:image" content="https://yourdomain.com/preview.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./Assets/images/profile.png" type="image/png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dinesh Moorthi - Laravel Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./Styles/style.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full navbar-bg backdrop-blur-sm z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="#home" class="text-primary text-xl font-bold">Dinesh</a>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                href="#home"
+                class="nav-item text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >Home</a
+              >
+              <a
+                href="#projects"
+                class="nav-item text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >Projects</a
+              >
+              <a
+                href="#skills"
+                class="text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >Skills</a
+              >
+              <a
+                href="#experience"
+                class="text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >Experience</a
+              >
+              <a
+                href="#about"
+                class="text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >About</a
+              >
+              <a
+                href="#contact"
+                class="text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >Contact</a
+              >
+            </div>
+          </div>
+
+          <!-- Theme Toggle Button -->
+          <div class="flex items-center space-x-4">
+            <button
+              id="theme-toggle"
+              class="text-secondary hover:text-primary focus:outline-none focus:text-primary p-2 rounded-md"
+            >
+              <i id="theme-icon" class="fas fa-moon text-xl"></i>
+            </button>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+              <button
+                id="mobile-menu-button"
+                class="text-secondary hover:text-primary focus:outline-none focus:text-primary"
+              >
+                <i class="fas fa-bars text-xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu-transition md:hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 navbar-bg">
+            <a
+              href="#home"
+              class="text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+              >Home</a
+            >
+            <a
+              href="#projects"
+              class="text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+              >Projects</a
+            >
+            <a
+              href="#skills"
+              class="text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+              >Skills</a
+            >
+            <a
+              href="#experience"
+              class="text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+              >Experience</a
+            >
+            <a
+              href="#about"
+              class="text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+              >About</a
+            >
+            <a
+              href="#contact"
+              class="nav-item text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="h-screen bg-cover bg-center relative"
+      style="background-image: url(&quot;./Assets/images/bg.png&quot;)"
+    >
+      <div class="absolute inset-0 hero-overlay"></div>
+      <div
+        class="relative z-10 flex flex-col items-center justify-center h-full text-primary hero-text text-center"
+      >
+        <img
+          src="./Assets/images/profile.png"
+          class="w-32 h-32 rounded-full mx-auto border-4 border-blue-400 fade-in"
+        />
+        <h1 class="text-5xl font-bold fade-in stagger-1">Dinesh</h1>
+        <p class="text-xl mt-2 fade-in stagger-2">Laravel Developer</p>
+        <p class="text-lg mt-2 text-secondary fade-in stagger-3">
+          Building scalable web applications using Laravel & PHP
+        </p>
+
+        <div class="mt-4 flex space-x-6 fade-in stagger-4">
+          <a
+            href="https://github.com/dineshmoorthi"
+            class="text-accent hover:text-blue-300 transition-colors"
+          >
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/dineshmoorthi"
+            class="text-accent hover:text-blue-300 transition-colors"
+          >
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+          <a
+            href="https://wa.me/1234567890"
+            class="text-accent hover:text-blue-300 transition-colors"
+          >
+            <i class="fab fa-whatsapp text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 section-bg-tertiary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-primary mb-12 fade-in">
+          Projects
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Project Card 1 -->
+          <div
+            class="card-bg card-hover rounded-lg p-6 transition-colors slide-up"
+          >
+            <h3 class="text-xl font-bold text-primary mb-3">
+              Training Management System
+            </h3>
+
+            <p class="text-secondary mb-4">
+              Developed a Training Management System using Laravel that allows
+              students to manage their profiles, enroll in courses, track
+              training progress, and handle payments. Implemented features like
+              authentication, profile management, course tracking, and payment
+              handling. Built both admin and student modules for complete system
+              control.
+            </p>
+
+            <p class="mb-4 text-sm text-secondary">
+              Tech: CodeIgniter 4, MySQL, Bootstrap
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 mb-4">
+              <img
+                src="./Assets/images/projects/astrowebsolution/dashboard.png"
+                class="project-image rounded-lg w-full h-24 object-cover"
+                alt="Dashboard"
+              />
+              <img
+                src="./Assets/images/projects/astrowebsolution/profile.png"
+                class="project-image rounded-lg w-full h-24 object-cover"
+                alt="Profile"
+              />
+              <img
+                src="./Assets/images/projects/astrowebsolution/training.png"
+                class="project-image rounded-lg w-full h-24 object-cover"
+                alt="Training"
+              />
+              <img
+                src="./Assets/images/projects/astrowebsolution/payment.png"
+                class="project-image rounded-lg w-full h-24 object-cover"
+                alt="Payment"
+              />
+            </div>
+
+            <!-- Features -->
+            <ul class="text-sm text-secondary mb-4 list-disc list-inside">
+              <li>
+                Developed student authentication system with secure login and
+                profile management
+              </li>
+              <li>
+                Implemented course selection and training enrollment
+                functionality
+              </li>
+              <li>
+                Built dynamic student dashboard with real-time training and
+                progress details
+              </li>
+              <li>
+                Enabled profile update system with validation and data
+                management
+              </li>
+              <li>
+                Deployed application on shared hosting (Hostinger) with live
+                production access
+              </li>
+            </ul>
+
+            <div class="flex justify-between items-center">
+              <a
+                href="https://training.astrowebsolution.com/student_login"
+                target="_blank"
+                class="text-accent hover:text-blue-300 transition-colors font-medium"
+              >
+                Live Demo →
+              </a>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div
+            class="card-bg card-hover rounded-lg p-6 transition-colors slide-up stagger-1"
+          >
+            <h3 class="text-xl font-bold text-primary mb-3">
+              Kuberan Foods Management System
+            </h3>
+
+            <p class="text-secondary mb-4">
+              Developed a complete food business management system with
+              role-based access, dish management, and flexible scheduling. The
+              system supports both daily dish selection and custom day-wise dish
+              availability, designed for real-world operations.
+            </p>
+
+            <p class="mb-4 text-sm text-secondary">
+              Tech: CodeIgniter 4, MySQL, AWS EC2, Apache
+            </p>
+
+            <!-- Screenshots -->
+            <div class="grid grid-cols-2 gap-3 mb-4">
+              <img
+                src="./Assets/images/projects/kuberanfoods/kuberan-login.png"
+                class="project-image rounded-lg h-24 w-full object-cover"
+              />
+              <img
+                src="./Assets/images/projects/kuberanfoods/kuberan-dashboard.png"
+                class="project-image rounded-lg h-24 w-full object-cover"
+              />
+              <img
+                src="./Assets/images/projects/kuberanfoods/kuberan-dish.png"
+                class="project-image rounded-lg h-24 w-full object-cover"
+              />
+              <img
+                src="./Assets/images/projects/kuberanfoods/kuberan-roles.png"
+                class="project-image rounded-lg h-24 w-full object-cover"
+              />
+            </div>
+
+            <!-- Features -->
+            <ul class="text-sm text-secondary mb-4 list-disc list-inside">
+              <li>Role-based access (Admin, Sub-admin, Manager)</li>
+              <li>Daily dish & day-wise dish scheduling</li>
+              <li>Category & dish management system</li>
+              <li>Deployed and managed on AWS EC2</li>
+            </ul>
+
+            <div class="flex justify-between items-center">
+              <a
+                href="http://16.176.148.92/admin/login"
+                target="_blank"
+                class="text-accent hover:text-blue-300 transition-colors font-medium"
+              >
+                View Project →
+              </a>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div
+            class="card-bg card-hover rounded-lg p-6 transition-colors slide-up stagger-2"
+          >
+            <h3 class="text-xl font-bold text-primary mb-3">
+              Hikoo Tech Admin Panel & Student System
+            </h3>
+
+            <p class="text-secondary mb-4">
+              Currently developing a training management system with admin panel
+              and student portal. The system focuses on efficient course
+              management, user handling, and scalable architecture.
+            </p>
+
+            <p class="mb-4 text-sm text-secondary">
+              Tech: Laravel, MySQL, JavaScript
+            </p>
+
+            <!-- Status Badge -->
+            <span
+              class="inline-block mb-4 px-3 py-1 text-xs bg-yellow-500/20 text-yellow-400 rounded"
+            >
+              🚧 In Development
+            </span>
+
+            <!-- Features -->
+            <ul class="text-sm text-secondary mb-4 list-disc list-inside">
+              <li>Developing admin dashboard for course and user management</li>
+              <li>Building student login and training access system</li>
+              <li>Designing scalable backend structure using Laravel MVC</li>
+              <li>Implementing authentication and role-based access control</li>
+            </ul>
+
+            <div class="flex justify-between items-center">
+              <span class="text-gray-500 text-sm">Live Demo Coming Soon</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 section-bg-secondary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-primary mb-12 fade-in">
+          Skills
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <!-- Backend -->
+          <div
+            class="skill-card card-bg card-hover rounded-lg p-6 text-center transition-colors scale-in stagger-1"
+          >
+            <div class="skill-icon text-accent">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3 class="font-semibold text-primary mb-2">Backend</h3>
+            <p class="text-secondary text-sm">
+              PHP, Laravel , Java, CodeIgniter
+            </p>
+          </div>
+
+          <!-- Frontend -->
+          <div
+            class="skill-card card-bg card-hover rounded-lg p-6 text-center transition-colors scale-in stagger-2"
+          >
+            <div class="skill-icon text-accent">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="font-semibold text-primary mb-2">Frontend</h3>
+            <p class="text-secondary text-sm">
+              HTML, CSS, JavaScript, Tailwind, Bootstrap
+            </p>
+          </div>
+
+          <!-- Database -->
+          <div
+            class="skill-card card-bg card-hover rounded-lg p-6 text-center transition-colors scale-in stagger-3"
+          >
+            <div class="skill-icon text-accent">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3 class="font-semibold text-primary mb-2">Database</h3>
+            <p class="text-secondary text-sm">MySQL</p>
+          </div>
+
+          <!-- Tools -->
+          <div
+            class="skill-card card-bg card-hover rounded-lg p-6 text-center transition-colors scale-in stagger-4"
+          >
+            <div class="skill-icon text-accent">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3 class="font-semibold text-primary mb-2">Tools</h3>
+            <p class="text-secondary text-sm">
+              Git, GitHub, VS Code, Postman API
+            </p>
+          </div>
+
+          <!-- Deployment -->
+          <div
+            class="skill-card card-bg card-hover rounded-lg p-6 text-center transition-colors scale-in stagger-5"
+          >
+            <div class="skill-icon text-accent">
+              <i class="fas fa-cloud-upload-alt"></i>
+            </div>
+            <h3 class="font-semibold text-primary mb-2">Deployment</h3>
+            <p class="text-secondary text-sm">AWS EC2, Apache, Hostinger</p>
+          </div>
+
+          <!-- Concepts -->
+          <div
+            class="skill-card card-bg card-hover rounded-lg p-6 text-center transition-colors scale-in stagger-6"
+          >
+            <div class="skill-icon text-accent">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3 class="font-semibold text-primary mb-2">Concepts</h3>
+            <p class="text-secondary text-sm">MVC, REST API, Authentication</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 section-bg-tertiary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-primary mb-12 fade-in">
+          Experience
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Hikoo Technologies -->
+          <div
+            class="card-bg card-hover rounded-lg p-6 transition-colors slide-left"
+          >
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <div
+                  class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500/20 text-accent"
+                >
+                  <i class="fas fa-briefcase"></i>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-lg font-bold text-primary">
+                  Laravel Developer
+                </h3>
+                <p class="text-sm text-secondary mt-1">Hikoo Technologies</p>
+                <p class="text-xs text-secondary/70 mt-1">2026 – Present</p>
+              </div>
+            </div>
+            <ul
+              class="mt-4 text-sm text-secondary list-disc list-inside space-y-1"
+            >
+              <li>
+                Developed and maintained web applications using Laravel
+                framework
+              </li>
+              <li>Built REST APIs for frontend integrations</li>
+              <li>Optimized MySQL queries for performance</li>
+              <li>Built admin panels and student management systems</li>
+            </ul>
+          </div>
+
+          <!-- Astrowebsolution -->
+          <div
+            class="card-bg card-hover rounded-lg p-6 transition-colors slide-up stagger-1"
+          >
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <div
+                  class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500/20 text-accent"
+                >
+                  <i class="fas fa-code"></i>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-lg font-bold text-primary">
+                  Software Developer
+                </h3>
+                <p class="text-sm text-secondary mt-1">Astrowebsolution</p>
+                <p class="text-xs text-secondary/70 mt-1">
+                  Jan 2025 – June 2025
+                </p>
+              </div>
+            </div>
+            <ul
+              class="mt-4 text-sm text-secondary list-disc list-inside space-y-1"
+            >
+              <li>Developed training management system</li>
+              <li>Implemented course tracking features</li>
+              <li>Built authentication systems</li>
+              <li>Deployed on Hostinger hosting</li>
+            </ul>
+          </div>
+
+          <!-- Previous Experience -->
+          <div
+            class="card-bg card-hover rounded-lg p-6 transition-colors slide-right"
+          >
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <div
+                  class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500/20 text-accent"
+                >
+                  <i class="fas fa-tools"></i>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-lg font-bold text-primary">
+                  Technical & Business
+                </h3>
+                <p class="text-sm text-secondary mt-1">
+                  Field Service Engineer
+                </p>
+                <p class="text-xs text-secondary/70 mt-1">2021 – 2024</p>
+              </div>
+            </div>
+            <ul
+              class="mt-4 text-sm text-secondary list-disc list-inside space-y-1"
+            >
+              <li>Machine installation & maintenance</li>
+              <li>Technical troubleshooting expertise</li>
+              <li>Student training & mentoring</li>
+              <li>Business operations management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 section-bg-secondary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-primary mb-12 fade-in">
+          About Me
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <!-- Content -->
+          <div class="space-y-4 text-secondary leading-relaxed slide-left">
+            <p>
+              I am a passionate Laravel Developer with experience in building
+              dynamic and scalable web applications. I specialize in backend
+              development, API integration, and database optimization using
+              Laravel and MySQL.
+            </p>
+
+            <p>
+              I have worked on real-time projects including training management
+              systems and admin dashboards, handling authentication, user
+              management, and deployment on platforms like AWS EC2 and
+              Hostinger.
+            </p>
+
+            <p>
+              I started my career as a Field Service Engineer, which helped me
+              develop strong problem-solving skills and practical thinking. Now,
+              I focus on growing as a full-stack developer and building
+              impactful digital solutions.
+            </p>
+          </div>
+
+          <!-- Stats/Highlights -->
+          <div class="grid grid-cols-2 gap-6 slide-right">
+            <div
+              class="card-bg card-hover rounded-lg p-6 text-center scale-in stagger-1"
+            >
+              <div class="text-3xl font-bold text-accent mb-2">2+</div>
+              <p class="text-primary font-semibold">Years Experience</p>
+              <p class="text-sm text-secondary mt-1">Backend & Web Dev</p>
+            </div>
+
+            <div
+              class="card-bg card-hover rounded-lg p-6 text-center scale-in stagger-2"
+            >
+              <div class="text-3xl font-bold text-accent mb-2">3+</div>
+              <p class="text-primary font-semibold">Projects Delivered</p>
+              <p class="text-sm text-secondary mt-1">Scalable Solutions</p>
+            </div>
+
+            <div
+              class="card-bg card-hover rounded-lg p-6 text-center scale-in stagger-3"
+            >
+              <div class="text-3xl font-bold text-accent mb-2">2+</div>
+              <p class="text-primary font-semibold">Companies</p>
+              <p class="text-sm text-secondary mt-1">Professional Work</p>
+            </div>
+
+            <div
+              class="card-bg card-hover rounded-lg p-6 text-center scale-in stagger-4"
+            >
+              <div class="text-3xl font-bold text-accent mb-2">10+</div>
+              <p class="text-primary font-semibold">Technologies</p>
+              <p class="text-sm text-secondary mt-1">Tools & Frameworks</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 section-bg-tertiary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-primary mb-12 fade-in">
+          Contact Me
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Contact Info -->
+          <div class="space-y-6 slide-left">
+            <div>
+              <p class="text-secondary leading-relaxed">
+                Feel free to reach out for job opportunities, collaborations, or
+                any queries. I'd love to hear from you!
+              </p>
+            </div>
+
+            <!-- Contact Methods -->
+            <div class="space-y-4">
+              <div
+                class="card-bg card-hover rounded-lg p-6 flex items-start gap-4 scale-in stagger-1"
+              >
+                <div class="flex-shrink-0">
+                  <div
+                    class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500/20 text-accent"
+                  >
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-primary">Email</h3>
+                  <p class="text-secondary text-sm mt-1">
+                    your.email@example.com
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="card-bg card-hover rounded-lg p-6 flex items-start gap-4 scale-in stagger-2"
+              >
+                <div class="flex-shrink-0">
+                  <div
+                    class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500/20 text-accent"
+                  >
+                    <i class="fas fa-phone"></i>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-primary">Phone</h3>
+                  <p class="text-secondary text-sm mt-1">+91 XXXX-XXX-XXX</p>
+                </div>
+              </div>
+
+              <div
+                class="card-bg card-hover rounded-lg p-6 flex items-start gap-4 scale-in stagger-3"
+              >
+                <div class="flex-shrink-0">
+                  <div
+                    class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500/20 text-accent"
+                  >
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-primary">Location</h3>
+                  <p class="text-secondary text-sm mt-1">
+                    Your City, Your Country
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="pt-4">
+              <p class="text-primary font-semibold mb-4">Connect with me</p>
+              <div class="flex gap-4">
+                <a
+                  href="https://github.com/dineshmoorthi"
+                  target="_blank"
+                  class="card-bg card-hover rounded-lg p-4 text-center text-accent hover:text-blue-300 transition-colors"
+                >
+                  <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a
+                  href="https://linkedin.com/in/dineshmoorthi"
+                  target="_blank"
+                  class="card-bg card-hover rounded-lg p-4 text-center text-accent hover:text-blue-300 transition-colors"
+                >
+                  <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a
+                  href="https://wa.me/1234567890"
+                  target="_blank"
+                  class="card-bg card-hover rounded-lg p-4 text-center text-accent hover:text-blue-300 transition-colors"
+                >
+                  <i class="fab fa-whatsapp text-2xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="card-bg rounded-lg p-8 slide-right">
+            <form id="contact-form" class="space-y-4">
+              <div>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  class="form-input w-full px-4 py-3 rounded-lg transition-all"
+                />
+              </div>
+
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                  class="form-input w-full px-4 py-3 rounded-lg transition-all"
+                />
+              </div>
+
+              <div>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                  class="form-input w-full px-4 py-3 rounded-lg transition-all resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                id="submit-btn"
+                class="form-button w-full hover:bg-blue-600 font-semibold py-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Send Message
+              </button>
+
+              <div
+                id="form-message"
+                class="hidden text-center p-3 rounded-lg bg-green-500/20 text-green-500 text-sm"
+              ></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="image-modal" class="image-modal" aria-hidden="true">
+      <div class="image-modal-content">
+        <div class="image-modal-backdrop"></div>
+        <button
+          id="image-modal-close"
+          class="image-modal-close"
+          aria-label="Close preview"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <img id="image-modal-img" class="image-modal-img" src="" alt="" />
+        <p id="image-modal-caption" class="text-center mt-4 text-secondary"></p>
+      </div>
+    </div>
+
+    <script src="./Scripts/main.js"></script>
+  </body>
+</html>
