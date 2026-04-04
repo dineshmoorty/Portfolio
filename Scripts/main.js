@@ -154,7 +154,7 @@ function showFormMessage(message, isSuccess) {
   }, 5000);
 }
 
-// Scroll animations using Intersection Observer
+// Minimal scroll animations using Intersection Observer
 const observerOptions = {
   threshold: 0.1,
   rootMargin: "0px 0px -50px 0px",
@@ -168,10 +168,8 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Observe all elements with animation classes
-const animatedElements = document.querySelectorAll(
-  ".fade-in, .slide-up, .slide-left, .slide-right, .scale-in",
-);
+// Observe only section titles with fade-in
+const animatedElements = document.querySelectorAll(".fade-in");
 animatedElements.forEach((element) => {
   observer.observe(element);
 });
