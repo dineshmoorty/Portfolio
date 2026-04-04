@@ -86,6 +86,10 @@ const submitBtn = document.getElementById("submit-btn");
 const formMessage = document.getElementById("form-message");
 
 if (contactForm) {
+  if (window.emailjs) {
+    emailjs.init("mVJm5uUx8Sio4CB_i");
+  }
+
   contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -104,25 +108,36 @@ if (contactForm) {
       return;
     }
 
+    if (!window.emailjs) {
+      showFormMessage(
+        "Email service is unavailable. Please refresh and try again.",
+        false,
+      );
+      return;
+    }
+
     // Disable button and show loading state
     submitBtn.disabled = true;
     const originalText = submitBtn.textContent;
     submitBtn.textContent = "Sending...";
 
     try {
-      // Create mailto link for email
-      const subject = encodeURIComponent(`New Portfolio Message from ${name}`);
-      const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      await emailjs.sendForm(
+        "service_fq4j1om",
+        "template_a0awrpc",
+        contactForm,
       );
-      window.location.href = `mailto:your.email@example.com?subject=${subject}&body=${body}`;
-      showFormMessage(
-        "Opening email client... Please send the prepared email.",
-        true,
+      await emailjs.sendForm(
+        "service_fq4j1om",
+        "template_dpy2mdc",
+        contactForm,
       );
+
+      showFormMessage("Message sent successfully ✅", true);
       contactForm.reset();
     } catch (error) {
-      showFormMessage("Error opening email client. Please try again.", false);
+      console.error("EmailJS error:", error);
+      showFormMessage("Something went wrong ❌ Please try again later.", false);
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = originalText;
